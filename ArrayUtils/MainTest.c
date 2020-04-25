@@ -9,7 +9,7 @@ int main()
 	int size  = sizeof(sortArray)/sizeof(int);
 	printf("size: %d\n", size);
 	int* sortPointer = sortArray;
-	bubbleSort(sortPointer, size);
+	quickSort(sortArray, size);
 
 	for (int i = 0; i < size; i++)
 	{
@@ -18,6 +18,4 @@ int main()
 	printf("\n");
 
 	int numberToFind = 21;
-	int foundIndex = binarySearch(sortArray, numberToFind, size);
-	printf("foundIndex: %d\n", foundIndex);
 }

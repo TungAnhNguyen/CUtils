@@ -57,3 +57,37 @@ void bubbleSort(int* inputArray, int size)
 		swap(inputArray, i, indexOfMinNumber);
 	}
 }
+
+/**
+ * @return -1 if startIndex out of bound
+*/
+int findMinNumberIndex(int* inputArray, int startIndex, int size) 
+{
+	if (startIndex < 0 || startIndex >= size)
+	{
+		return -1;
+	}
+	
+	int minNumberIndex = startIndex;
+	for (int i = startIndex; i < size; i++)	
+	{
+		int currentNumber = *(inputArray + i);
+		if (currentNumber < *(inputArray + minNumberIndex))
+		{
+			minNumberIndex = i;
+		}
+	}
+	return minNumberIndex;
+}
+
+void quickSort(int* inputArray, int size) 
+{
+	for (int i = 0; i < size; i++)
+	{
+		int indexOfMinNumber = findMinNumberIndex(inputArray, i, size);
+		if (i != indexOfMinNumber)
+		{
+			swap(inputArray, i, indexOfMinNumber);
+		}
+	}	
+}
