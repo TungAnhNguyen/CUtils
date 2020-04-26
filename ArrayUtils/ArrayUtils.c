@@ -91,3 +91,21 @@ void quickSort(int* inputArray, int size)
 		}
 	}	
 }
+
+/**
+ * @param firstArray occupies from startIndex to middleIndex (exclusive)
+ * @param secondArray occupies from middleIndex (inclusive) to size - 1
+ * it's up to the caller to make sure indexes are not out of bound.
+*/
+void splitArray(int* inputArray, int startIndex, int middleIndex, int size, int* firstArray, int* secondArray)
+{
+	for (int i = 0; i < middleIndex; i++)
+	{
+		*(firstArray + i) = *(inputArray + i);
+	}
+
+	for (int i = middleIndex; i < size; i++)
+	{
+		*(secondArray + i - middleIndex) = *(inputArray + i);
+	}
+}
