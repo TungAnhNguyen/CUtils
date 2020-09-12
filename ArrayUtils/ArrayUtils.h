@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h>//todo: consider remove
 
 void swap(int* inputArray, int firstIndex, int secondIndex);
 int binarySearch(int* sortedArray, int numberToFind, int size);
