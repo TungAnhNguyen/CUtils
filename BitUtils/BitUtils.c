@@ -15,11 +15,17 @@ int getBitLength(int x)
 
 int getEndBits(int x, int countingFromEnd)
 {
-	int lenX = getBitLength(x);
-
 	int endBits = x >> countingFromEnd;
 	endBits = endBits << countingFromEnd;
 	endBits = x - endBits;
 
 	return endBits;
+}
+
+int getFrontBits(int x, int countingFromRight)
+{
+	int lenX = getBitLength(x);
+
+	int frontBits = x >> lenX - countingFromRight;
+	return frontBits;
 }

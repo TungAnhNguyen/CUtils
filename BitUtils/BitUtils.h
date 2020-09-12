@@ -6,6 +6,11 @@
 int getBitLength(int x);
 
 /**
- * get bits in int form, counting from 1, starting from the leftest.
+ * get int form of: number of bits from a number, starting from the left.
 */
 int getEndBits(int x, int countingFromEnd);
+
+/**
+ * get int form of: number of bits from a number, starting from the right.
+*/
+int getFrontBits(int x, int countingFromRight);

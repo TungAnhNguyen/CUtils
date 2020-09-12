@@ -3,7 +3,6 @@
 
 int main()
 {
-
-	int i = 2222;
-	printf("i: %d; endBits: %d\n", i, getEndBits(i, 10));
+	int i = 696903;
+	printf("i: %d; frontBits: %d\n", i, getFrontBits(i, 10));
 }
