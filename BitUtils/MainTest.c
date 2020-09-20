@@ -3,6 +3,9 @@
 
 int main()
 {
-	int i = 696903;
-	printf("i: %d; frontBits: %d\n", i, getFrontBits(i, 10));
+	for (int i = 0; i < 11; i++)
+	{
+		printf("i: %d; fieldOne: %d\n", i, createBitFieldOne(i) + 1);
+	}
+	
 }
