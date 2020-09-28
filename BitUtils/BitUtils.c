@@ -32,13 +32,11 @@ int getFrontBits(int x, int countingFromRight)
 
 int createBitFieldOne(int length)
 {
-	//todo: implement
-	int sum = 0;
-	length--;
-	for (int i = 0; i < length; i++)
+	if (length == 0)
 	{
-		sum += 2 << i;
+		return 0;
 	}
-	
-	return sum;
+
+	length--;
+	return (2 << length) - 1;
 }
