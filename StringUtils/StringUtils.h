@@ -13,3 +13,9 @@ void toLowerCase(char * str);
  * convert input string to upper case
 */
 void toUpperCase(char * str);
+
+/**
+ * find the first found @param pattern in @param source
+ * returns -1 if not found
+*/
+int stringIndex(char * source, char * pattern);

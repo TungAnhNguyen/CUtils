@@ -6,7 +6,10 @@
 int main()
 {
 	char * str = malloc(1000);
-	strcpy(str, "I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL\0");
+	char * pattern = malloc(100);
 
-	printf("before: %s; length: %d\n", str, getStringLength(str));
+	strcpy(str, "I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL\0");
+	strcpy(pattern, "harp\0");
+
+	printf("patternIndex: %d\n", stringIndex(str, pattern));
 }

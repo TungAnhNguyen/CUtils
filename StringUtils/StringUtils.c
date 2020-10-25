@@ -34,3 +34,28 @@ void toUpperCase (char * str)
 		}
 	}
 }
+
+int stringIndex(char * source, char * pattern)
+{
+	int i, j;
+	int isFound = 0;
+	for (i = 0; source[i] != '\0'; i++)
+	{
+		for (j = 0; source[i] == pattern[j] && pattern[j] != '\0'; j++)
+		{	
+			++i;
+		}
+
+		if (pattern[j] == '\0')
+		{
+			isFound = 1;
+			break;
+		}
+	}
+	if (isFound == 0)
+	{
+		return -1;
+	}
+
+	return i - j;
+}
