@@ -2,6 +2,16 @@
 
 #define LOWER_UPPER_CASE_DIFFERENCE 32
 
+int getStringLength(char *s)
+{
+	int length = 0;
+	for (int i = 0; s[i] != '\0'; i++)
+	{
+		++length;
+	}
+
+	return length;
+}
 
 void toLowerCase(char * str)
 {

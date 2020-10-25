@@ -8,7 +8,5 @@ int main()
 	char * str = malloc(1000);
 	strcpy(str, "I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL\0");
 
-	printf("before: %s\n", str);
-	toUpperCase(str);
-	printf("after: %s\n", str);
+	printf("before: %s; length: %d\n", str, getStringLength(str));
 }
