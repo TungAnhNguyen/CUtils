@@ -19,3 +19,9 @@ void toUpperCase(char * str);
  * returns -1 if not found
 */
 int stringIndex(char * source, char * pattern);
+
+/**
+ * trim trailing and beginning spaces in string source.
+ * @return: the same param that has been trimmed left and right
+ */
+char *trim(char *source);

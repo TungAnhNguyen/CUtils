@@ -3,13 +3,16 @@
 #include <stdlib.h>
 #include "StringUtils.h"
 
+//should I use unit test instead?
 int main()
 {
-	char * str = malloc(1000);
+	char * source = malloc(1000);
 	char * pattern = malloc(100);
 
-	strcpy(str, "I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL\0");
-	strcpy(pattern, "harp\0");
+	strcpy(source, "      I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL         \0");
+	toLowerCase(source);
+	printf("original string: %sMARKEND\n", source);
+	source = trim(source);
 
-	printf("patternIndex: %d\n", stringIndex(str, pattern));
+	printf("after trimmed: %sMARKEND\n", source);
 }

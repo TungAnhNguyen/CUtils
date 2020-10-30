@@ -1,3 +1,6 @@
+#include <string.h>
+#include <stdio.h>
+
 #include "StringUtils.h"
 
 #define LOWER_UPPER_CASE_DIFFERENCE 32
@@ -13,7 +16,7 @@ int getStringLength(char *s)
 	return length;
 }
 
-void toLowerCase(char * str)
+void toLowerCase(char *str)
 {
 	for (int i = 0; str[i] != '\0'; i++)
 	{
@@ -24,7 +27,7 @@ void toLowerCase(char * str)
 	}
 }
 
-void toUpperCase (char * str)
+void toUpperCase(char *str)
 {
 	for (int i = 0; str[i] != '\0'; i++)
 	{
@@ -35,14 +38,14 @@ void toUpperCase (char * str)
 	}
 }
 
-int stringIndex(char * source, char * pattern)
+int stringIndex(char *source, char *pattern)
 {
 	int i, j;
 	int isFound = 0;
 	for (i = 0; source[i] != '\0'; i++)
 	{
 		for (j = 0; source[i] == pattern[j] && pattern[j] != '\0'; j++)
-		{	
+		{
 			++i;
 		}
 
@@ -58,4 +61,25 @@ int stringIndex(char * source, char * pattern)
 	}
 
 	return i - j;
+}
+
+char* trim(char *source)
+{
+	int beginning = 0;
+	for (beginning = 0; source[beginning] == ' '; beginning++)
+	{
+	}
+	source += beginning;
+
+	int sourceLength = getStringLength(source);
+	int end;
+	for (end = sourceLength - 1; source[end] == ' '; end--)
+	{
+	}
+
+	++end;
+	source[end] = '\0';
+
+	printf("trim() source: %sMARKEND\n", source);
+	return source;
 }
