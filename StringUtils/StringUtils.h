@@ -36,4 +36,4 @@ void clearString(char *source);
 */
 int convertStringToInt(char *source);
 
-int powerInt(const int base, const int exponent)
+int powerInt(const int base, const int exponent);

@@ -9,8 +9,8 @@ int main()
 	char * source = malloc(1000);
 	char * pattern = malloc(100);
 
-	strcpy(source, "73501");
+	strcpy(source, "123456");
 	int number = convertStringToInt(source);
-	printf("source: %d\n", number);
+	printf("number: %d\n", number);
 	printf("MARKEND");
 }
