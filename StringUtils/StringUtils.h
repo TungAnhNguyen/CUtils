@@ -27,6 +27,13 @@ int stringIndex(char * source, char * pattern);
 char *trim(char *source);
 
 /**
- * turn all content into ' '
+ * turn all content char into ' '
  */
 void clearString(char *source);
+
+/**
+ * turn a string into int
+*/
+int convertStringToInt(char *source);
+
+int powerInt(const int base, const int exponent)

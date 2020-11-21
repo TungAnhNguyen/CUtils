@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "StringUtils.h"
 
@@ -89,4 +90,49 @@ void clearString(char *source)
 	{
 		source[i] = ' ';
 	}
+}
+
+//todo: expand it to include negative number and other special case
+//todo: watch out stackoverflow at 10 ** 10
+//todo: consider using pow from cmath.h
+int powerInt(const int base, const int exponent)
+{
+	if (exponent == 0)
+	{
+		return 1;
+	}
+	
+	int result = base;
+	for (int i = 1; i < exponent; i++)
+	{
+		result *= base;
+	}
+	return result;
+}
+
+bool isDigit(char c)
+{
+	return c >= '0' && c <= '9';
+}
+
+int convertStringToInt(char *source)
+{
+	trim(source);
+	int length = getStringLength(source);
+
+	int result = 0;
+	for (int i = 0; i < length; i++)
+	{
+		if (!isDigit(source[i]))
+		{
+			break;
+		}
+		
+		int digit = source[i] - '0';
+		
+		int columnNumber = digit * powerInt(10, length - i - 1);
+		result += columnNumber;
+	}
+
+	return result;
 }

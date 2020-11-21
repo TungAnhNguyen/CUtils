@@ -9,9 +9,8 @@ int main()
 	char * source = malloc(1000);
 	char * pattern = malloc(100);
 
-	strcpy(source, "      I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL         \0");
-	clearString(source);
-
-	printf("after trimmed: %s", source);
+	strcpy(source, "73501");
+	int number = convertStringToInt(source);
+	printf("source: %d\n", number);
 	printf("MARKEND");
 }
