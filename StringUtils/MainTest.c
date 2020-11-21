@@ -10,9 +10,8 @@ int main()
 	char * pattern = malloc(100);
 
 	strcpy(source, "      I wondER if this TESt wOrkS iN C Sharp and in OTHER TEST As WElL         \0");
-	toLowerCase(source);
-	printf("original string: %sMARKEND\n", source);
-	source = trim(source);
+	clearString(source);
 
-	printf("after trimmed: %sMARKEND\n", source);
+	printf("after trimmed: %s", source);
+	printf("MARKEND");
 }

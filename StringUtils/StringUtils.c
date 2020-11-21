@@ -80,6 +80,13 @@ char* trim(char *source)
 	++end;
 	source[end] = '\0';
 
-	printf("trim() source: %sMARKEND\n", source);
 	return source;
+}
+
+void clearString(char *source)
+{
+	for (int i = 0; source[i] != '\0'; i++)
+	{
+		source[i] = ' ';
+	}
 }

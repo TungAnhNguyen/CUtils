@@ -25,3 +25,8 @@ int stringIndex(char * source, char * pattern);
  * @return: the same param that has been trimmed left and right
  */
 char *trim(char *source);
+
+/**
+ * turn all content into ' '
+ */
+void clearString(char *source);
